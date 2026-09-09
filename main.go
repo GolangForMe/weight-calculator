@@ -9,11 +9,13 @@ import (
 
 func main() {
 	var (
-		weight int
-		height float64
+		weight int     = 80
+		height float64 = 1.7
 	)
 
-	fmt.Print("Введите свой вес в килограммах (180): ")
+	fmt.Println("___ Калькулятор индекса массы тела ___")
+
+	fmt.Print("Введите свой вес в килограммах (80): ")
 	fmt.Scan(&weight)
 
 	fmt.Print("Введите свой рост в метрах (1.7): ")
@@ -21,6 +23,6 @@ func main() {
 
 	imt := calc.Calc(weight, height)
 
-	fmt.Printf("Индекс веса равен %f\n", imt)
-	fmt.Printf(check.Check(imt))
+	fmt.Printf("Индекс веса равен %0.2f\n", imt)
+	fmt.Println(check.Check(imt))
 }

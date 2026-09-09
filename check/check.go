@@ -1,5 +1,6 @@
 package check
 
+// Check - функция для проверки результата расчета индекса массы тела
 func Check(imt float64) string {
 	msg := ""
 
