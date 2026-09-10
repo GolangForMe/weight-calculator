@@ -24,6 +24,21 @@ func GetUserInput() (int, float64) {
 
 // PrintImt выводит индекс массы тела (IMT) и результат проверки на соответствие стандартам
 func PrintImt(imt float64) {
+	fmt.Println("---------------------")
 	fmt.Printf("Индекс веса равен %0.2f\n", imt)
 	fmt.Println(check.Check(imt))
+}
+
+// Проверка выбора пользователя
+func CheckUserChoise() bool {
+	var choise string
+	fmt.Println("=======================")
+	fmt.Print("Хотите продолжить (yes/no): ")
+	fmt.Scan(&choise)
+
+	if choise == "no" || choise == "n" {
+		return true
+	}
+
+	return false
 }
