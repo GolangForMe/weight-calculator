@@ -18,7 +18,7 @@ func main() {
 	fmt.Print("Введите свой вес в килограммах (80): ")
 	fmt.Scan(&weight)
 
-	fmt.Print("Введите свой рост в метрах (1.7): ")
+	fmt.Print("Введите свой рост в метрах (170): ")
 	fmt.Scan(&height)
 
 	imt := calc.Calc(weight, height)
