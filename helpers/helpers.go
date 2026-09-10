@@ -6,6 +6,7 @@ import (
 	"github.com/gearmobile/calculator/check"
 )
 
+// GetUserInput запрашивает у пользователя свой вес и рост, а затем возвращает их в виде целого числа и float64
 func GetUserInput() (int, float64) {
 	var (
 		weight int     = 80
@@ -21,6 +22,7 @@ func GetUserInput() (int, float64) {
 	return weight, height
 }
 
+// PrintImt выводит индекс массы тела (IMT) и результат проверки на соответствие стандартам
 func PrintImt(imt float64) {
 	fmt.Printf("Индекс веса равен %0.2f\n", imt)
 	fmt.Println(check.Check(imt))
