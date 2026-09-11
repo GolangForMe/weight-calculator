@@ -12,11 +12,14 @@ func main() {
 
 	for {
 		weight, height := helpers.GetUserInput()
-		imt := calc.Calc(weight, height)
+		imt, err := calc.Calc(weight, height)
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
 		helpers.PrintImt(imt)
-		choise := helpers.CheckUserChoise()
 
-		if choise {
+		if helpers.CheckUserChoise() {
 			fmt.Println("Всего хорошего и спасибо за рыбу!")
 			break
 		}

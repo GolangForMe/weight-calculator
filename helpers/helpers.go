@@ -13,6 +13,7 @@ func GetUserInput() (int, float64) {
 		height float64 = 1.7
 	)
 
+	fmt.Println("--------------------------------------")
 	fmt.Print("Введите свой вес в килограммах (80): ")
 	fmt.Scan(&weight)
 
